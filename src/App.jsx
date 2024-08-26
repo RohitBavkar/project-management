@@ -9,11 +9,27 @@ function App() {
     projects: [],
   });
 
-  function handleAddProject() {}
+  function handleAddProject() {
+    setProject((prevState) => {
+      return {
+        ...prevState,
+        selectedProjectID: null,
+      };
+    });
+  }
+
+  let content;
+  if (project.selectedProjectID === null) {
+    content = <NewProject />;
+  } else if (project.selectedProjectID === undefined) {
+    content = <Dashboard onNewProjectClick={handleAddProject} />;
+  } else {
+  }
   return (
     <main className="my-8 flex">
-      <Sidebar />
-      <Dashboard />
+      <Sidebar onButtonClick={handleAddProject} />
+
+      {content}
     </main>
   );
 }

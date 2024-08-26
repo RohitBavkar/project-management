@@ -1,6 +1,6 @@
 import MenuItem from "./MenuItem";
 
-function Sidebar() {
+function Sidebar({ onButtonClick }) {
   return (
     <aside className="w-96">
       <div
@@ -46,6 +46,7 @@ function Sidebar() {
             />
             <MenuItem
               name="New Project"
+              onButtonClick={onButtonClick}
               svg={
                 <svg
                   className="size-4"
