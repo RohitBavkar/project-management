@@ -2,6 +2,8 @@ import { useState } from "react";
 import Dashboard from "./components/Dashboard";
 import NewProject from "./components/NewProject";
 import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
+import Breadcrumb from "./components/Breadcrumb";
 
 function App() {
   const [project, setProject] = useState({
@@ -26,6 +28,7 @@ function App() {
       };
       return {
         ...prevState,
+        selectedProjectID: undefined,
         projects: [...prevState.projects, newProject],
       };
     });
@@ -35,15 +38,21 @@ function App() {
   if (project.selectedProjectID === null) {
     content = <NewProject handleNewProject={handleNewProject} />;
   } else if (project.selectedProjectID === undefined) {
-    content = <Dashboard onNewProjectClick={handleAddProject} />;
+    content = (
+      <Dashboard
+        onNewProjectClick={handleAddProject}
+        projects={project.projects}
+      />
+    );
   } else {
   }
   return (
-    <main className="my-8 flex">
+    <>
+      <Header />
+      <Breadcrumb />
       <Sidebar onButtonClick={handleAddProject} />
-
       {content}
-    </main>
+    </>
   );
 }
 

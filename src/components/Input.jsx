@@ -13,6 +13,7 @@ const Input = forwardRef(function Input({ label, textarea, ...props }, ref) {
         {textarea ? (
           <div className="mt-2">
             <textarea
+              {...props}
               id={label}
               name={label}
               rows="3"
@@ -24,7 +25,7 @@ const Input = forwardRef(function Input({ label, textarea, ...props }, ref) {
           <div className="mt-2">
             <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
               <input
-                type="text"
+                {...props}
                 name={label}
                 id={label}
                 ref={ref}

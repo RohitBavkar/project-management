@@ -21,8 +21,8 @@ function NewProject({ handleNewProject }) {
   return (
     <section className="w-4/5 p-20">
       <div>
-        <Input ref={title} label="Title"></Input>
-        <Input ref={dueDate} label="Due Date"></Input>
+        <Input type="text" ref={title} label="Title"></Input>
+        <Input type="date" ref={dueDate} label="Due Date"></Input>
         <Input ref={description} label="Description" textarea></Input>
       </div>
       <div className="mt-6 flex items-center justify-end gap-x-6 sm:max-w-lg">
