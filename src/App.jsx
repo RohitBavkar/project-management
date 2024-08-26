@@ -18,9 +18,22 @@ function App() {
     });
   }
 
+  function handleNewProject(projectData) {
+    setProject((prevState) => {
+      const newProject = {
+        ...projectData,
+        id: Math.random(),
+      };
+      return {
+        ...prevState,
+        projects: [...prevState.projects, newProject],
+      };
+    });
+  }
+  console.log(project);
   let content;
   if (project.selectedProjectID === null) {
-    content = <NewProject />;
+    content = <NewProject handleNewProject={handleNewProject} />;
   } else if (project.selectedProjectID === undefined) {
     content = <Dashboard onNewProjectClick={handleAddProject} />;
   } else {
