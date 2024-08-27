@@ -1,46 +1,74 @@
 import { useRef } from "react";
 import Input from "./Input";
 
-function NewProject({ handleNewProject }) {
+function NewProject({ onSaveClick }) {
   const title = useRef();
   const dueDate = useRef();
   const description = useRef();
 
-  function handleSave() {
+  function handleSaveclick() {
     const enteredTitle = title.current.value;
     const enteredDueDate = dueDate.current.value;
     const enteredDescription = description.current.value;
 
     //validations
-    handleNewProject({
+    onSaveClick({
       title: enteredTitle,
       dueDate: enteredDueDate,
       description: enteredDescription,
     });
   }
   return (
-    <section className="w-4/5 p-20">
-      <div>
-        <Input type="text" ref={title} label="Title"></Input>
-        <Input type="date" ref={dueDate} label="Due Date"></Input>
-        <Input ref={description} label="Description" textarea></Input>
+    <>
+      <div className="flex flex-col">
+        <div className="-m-1.5 overflow-x-auto">
+          <div className="p-1.5 min-w-full inline-block align-middle">
+            <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden ">
+              {/* <!-- Header --> */}
+              <div className="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 ">
+                <div>
+                  <h2 className="text-xl font-semibold text-gray-800 ">
+                    Add New Project
+                  </h2>
+                </div>
+              </div>
+              {/* <!-- End Header --> */}
+
+              {/* <!-- Form --> */}
+              <Input type="text" ref={title} label="Title"></Input>
+              <Input type="date" ref={dueDate} label="Due Date"></Input>
+              <Input ref={description} label="Description" textarea></Input>
+              {/* <!-- End Form --> */}
+
+              {/* <!-- Footer --> */}
+              <div className="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200 ">
+                <div>Remove this div</div>
+
+                <div>
+                  <div className="inline-flex gap-x-2">
+                    <a
+                      className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50 "
+                      href="#"
+                    >
+                      Cancel
+                    </a>
+
+                    <a
+                      onClick={handleSaveclick}
+                      className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                      href="#"
+                    >
+                      Save
+                    </a>
+                  </div>
+                </div>
+              </div>
+              {/* <!-- End Footer --> */}
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="mt-6 flex items-center justify-end gap-x-6 sm:max-w-lg">
-        <button
-          onClick={handleSave}
-          type="button"
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 focus:outline-none"
-        >
-          Save
-        </button>
-        <button
-          type="button"
-          className="py-2.5 px-5 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100"
-        >
-          Cancel
-        </button>
-      </div>
-    </section>
+    </>
   );
 }
 export default NewProject;

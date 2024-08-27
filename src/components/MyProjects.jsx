@@ -23,6 +23,7 @@ function MyProjects({ onNewProjectClick, projects }) {
                     </a>
 
                     <a
+                      onClick={onNewProjectClick}
                       className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
                       href="#"
                     >
@@ -47,7 +48,9 @@ function MyProjects({ onNewProjectClick, projects }) {
                 </div>
               </div>
               {/* <!-- End Header --> */}
-
+              {projects.map((project) => {
+                <span key={project.id}>{project.title}</span>;
+              })}
               {/* <!-- Table --> */}
               <table className="min-w-full divide-y divide-gray-200 ">
                 <thead className="bg-gray-50 ">
@@ -105,90 +108,92 @@ function MyProjects({ onNewProjectClick, projects }) {
                 </thead>
 
                 <tbody className="divide-y divide-gray-200 ">
-                  <tr>
-                    <td className="size-px whitespace-nowrap">
-                      <div className="ps-6 py-3">
-                        <div className="flex items-center gap-x-3">
-                          <div className="grow">
-                            <span className="block text-sm font-semibold text-gray-800 ">
-                              Christina Bersh
-                            </span>
-                            <span className="block text-sm text-gray-500 ">
-                              christina@site.com
-                            </span>
+                  {projects.map((project) => {
+                    <tr key={project.id}>
+                      <td className="size-px whitespace-nowrap">
+                        <div className="ps-6 py-3">
+                          <div className="flex items-center gap-x-3">
+                            <div className="grow">
+                              <span className="block text-sm font-semibold text-gray-800 ">
+                                {project.title}
+                              </span>
+                              <span className="block text-sm text-gray-500 ">
+                                christina@site.com
+                              </span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </td>
-                    <td className="h-px w-72 whitespace-nowrap">
-                      <div className="px-6 py-3">
-                        <span className="block text-sm font-semibold text-gray-800 ">
-                          Director
-                        </span>
-                        <span className="block text-sm text-gray-500 ">
-                          Human resources
-                        </span>
-                      </div>
-                    </td>
-                    <td className="size-px whitespace-nowrap">
-                      <div className="px-6 py-3">
-                        <span className="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full ">
-                          <svg
-                            className="size-2.5"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            fill="currentColor"
-                            viewBox="0 0 16 16"
+                      </td>
+                      <td className="h-px w-72 whitespace-nowrap">
+                        <div className="px-6 py-3">
+                          <span className="block text-sm font-semibold text-gray-800 ">
+                            {project.description}
+                          </span>
+                          <span className="block text-sm text-gray-500 ">
+                            Human resources
+                          </span>
+                        </div>
+                      </td>
+                      <td className="size-px whitespace-nowrap">
+                        <div className="px-6 py-3">
+                          <span className="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full ">
+                            <svg
+                              className="size-2.5"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                              viewBox="0 0 16 16"
+                            >
+                              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                            Active
+                          </span>
+                        </div>
+                      </td>
+                      <td className="size-px whitespace-nowrap">
+                        <div className="px-6 py-3">
+                          <div className="flex items-center gap-x-3">
+                            <span className="text-xs text-gray-500 ">1/5</span>
+                            <div className="flex w-full h-1.5 bg-gray-200 rounded-full overflow-hidden ">
+                              <div
+                                className="flex flex-col justify-center overflow-hidden bg-gray-800 "
+                                role="progressbar"
+                                style={{ width: "25%" }}
+                                aria-valuenow="25"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td className="size-px whitespace-nowrap">
+                        <div className="px-6 py-3">
+                          <span className="text-sm text-gray-500 ">
+                            28 Dec, 12:12
+                          </span>
+                        </div>
+                      </td>
+                      <td className="size-px whitespace-nowrap">
+                        <div className="px-6 py-3">
+                          <span className="text-sm text-gray-500 ">
+                            {project.dueDate}
+                          </span>
+                        </div>
+                      </td>
+                      <td className="size-px whitespace-nowrap">
+                        <div className="px-6 py-1.5">
+                          <a
+                            className="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium "
+                            href="#"
                           >
-                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                          </svg>
-                          Active
-                        </span>
-                      </div>
-                    </td>
-                    <td className="size-px whitespace-nowrap">
-                      <div className="px-6 py-3">
-                        <div className="flex items-center gap-x-3">
-                          <span className="text-xs text-gray-500 ">1/5</span>
-                          <div className="flex w-full h-1.5 bg-gray-200 rounded-full overflow-hidden ">
-                            <div
-                              className="flex flex-col justify-center overflow-hidden bg-gray-800 "
-                              role="progressbar"
-                              style={{ width: "25%" }}
-                              aria-valuenow="25"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            ></div>
-                          </div>
+                            Edit
+                          </a>
                         </div>
-                      </div>
-                    </td>
-                    <td className="size-px whitespace-nowrap">
-                      <div className="px-6 py-3">
-                        <span className="text-sm text-gray-500 ">
-                          28 Dec, 12:12
-                        </span>
-                      </div>
-                    </td>
-                    <td className="size-px whitespace-nowrap">
-                      <div className="px-6 py-3">
-                        <span className="text-sm text-gray-500 ">
-                          28 Dec, 12:12
-                        </span>
-                      </div>
-                    </td>
-                    <td className="size-px whitespace-nowrap">
-                      <div className="px-6 py-1.5">
-                        <a
-                          className="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium "
-                          href="#"
-                        >
-                          Edit
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
+                      </td>
+                    </tr>;
+                  })}
                 </tbody>
               </table>
               {/* <!-- End Table --> */}

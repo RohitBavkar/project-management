@@ -1,18 +1,19 @@
 import { useState } from "react";
-import Dashboard from "./components/Dashboard";
 import NewProject from "./components/NewProject";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Breadcrumb from "./components/Breadcrumb";
+import NoProject from "./components/NoProject";
+import Dashboard from "./components/Dashboard";
 
 function App() {
-  const [project, setProject] = useState({
+  const [projectState, setProjectState] = useState({
     selectedProjectID: undefined,
     projects: [],
   });
 
-  function handleAddProject() {
-    setProject((prevState) => {
+  function handleNewProjectClick() {
+    setProjectState((prevState) => {
       return {
         ...prevState,
         selectedProjectID: null,
@@ -20,38 +21,42 @@ function App() {
     });
   }
 
-  function handleNewProject(projectData) {
-    setProject((prevState) => {
+  function handleNewProjectCreation(projectData) {
+    setProjectState((prevState) => {
       const newProject = {
         ...projectData,
         id: Math.random(),
       };
       return {
         ...prevState,
-        selectedProjectID: undefined,
+        selectedProjectID: "new",
         projects: [...prevState.projects, newProject],
       };
     });
   }
-  console.log(project);
   let content;
-  if (project.selectedProjectID === null) {
-    content = <NewProject handleNewProject={handleNewProject} />;
-  } else if (project.selectedProjectID === undefined) {
+  if (projectState.selectedProjectID === null) {
+    content = <NewProject onSaveClick={handleNewProjectCreation} />;
+  } else if (projectState.selectedProjectID === undefined) {
+    content = <NoProject onNewProjectClick={handleNewProjectClick} />;
+  } else {
     content = (
       <Dashboard
-        onNewProjectClick={handleAddProject}
-        projects={project.projects}
+        onNewProjectClick={handleNewProjectClick}
+        projects={projectState.projects}
       />
     );
-  } else {
   }
+  console.log(projectState);
   return (
     <>
       <Header />
       <Breadcrumb />
-      <Sidebar onButtonClick={handleAddProject} />
-      {content}
+      <Sidebar />
+
+      <div className="w-full lg:ps-64">
+        <div className="p-4 sm:p-6 space-y-4 sm:space-y-6">{content}</div>
+      </div>
     </>
   );
 }
