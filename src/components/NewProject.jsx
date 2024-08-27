@@ -1,10 +1,12 @@
 import { useRef } from "react";
 import Input from "./Input";
+import Modal from "./Modal";
 
 function NewProject({ onSaveClick }) {
   const title = useRef();
   const dueDate = useRef();
   const description = useRef();
+  const modal = useRef();
 
   function handleSaveclick() {
     const enteredTitle = title.current.value;
@@ -12,6 +14,14 @@ function NewProject({ onSaveClick }) {
     const enteredDescription = description.current.value;
 
     //validations
+    if (
+      enteredTitle.trim() === "" ||
+      enteredDueDate.trim() === "" ||
+      enteredDescription.trim() === ""
+    ) {
+      modal.current.open();
+      return;
+    }
     onSaveClick({
       title: enteredTitle,
       dueDate: enteredDueDate,
@@ -20,6 +30,12 @@ function NewProject({ onSaveClick }) {
   }
   return (
     <>
+      <Modal ref={modal} buttonText="Close">
+        <p className="text-stone-700 mb-4">
+          Fields marked with <span className="text-red-600">*</span> are
+          mandatory and can not be blank.
+        </p>
+      </Modal>
       <div className="flex flex-col">
         <div className="-m-1.5 overflow-x-auto">
           <div className="p-1.5 min-w-full inline-block align-middle">
