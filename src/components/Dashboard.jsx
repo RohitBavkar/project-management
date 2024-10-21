@@ -47,20 +47,6 @@ function Dashboard() {
             <table className="min-w-full divide-y divide-gray-200 ">
               <thead className="bg-gray-50 ">
                 <tr>
-                  <th scope="col" className="ps-6 py-3 text-start">
-                    <label
-                      htmlFor="hs-at-with-checkboxes-main"
-                      className="flex"
-                    >
-                      <input
-                        type="checkbox"
-                        className="shrink-0 border-gray-300 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none "
-                        id="hs-at-with-checkboxes-main"
-                      />
-                      <span className="sr-only">Checkbox</span>
-                    </label>
-                  </th>
-
                   <th
                     scope="col"
                     className="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3 text-start"
@@ -103,18 +89,6 @@ function Dashboard() {
               <tbody className="divide-y divide-gray-200 ">
                 <tr>
                   <td className="size-px whitespace-nowrap">
-                    <div className="ps-6 py-3">
-                      <label htmlFor="hs-at-with-checkboxes-1" className="flex">
-                        <input
-                          type="checkbox"
-                          className="shrink-0 border-gray-300 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none "
-                          id="hs-at-with-checkboxes-1"
-                        />
-                        <span className="sr-only">Checkbox</span>
-                      </label>
-                    </div>
-                  </td>
-                  <td className="size-px whitespace-nowrap">
                     <div className="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3">
                       <div className="flex items-center gap-x-3">
                         <img
@@ -153,7 +127,7 @@ function Dashboard() {
                         >
                           <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
                         </svg>
-                        Active
+                        Done
                       </span>
                     </div>
                   </td>
@@ -179,18 +153,6 @@ function Dashboard() {
 
                 <tr>
                   <td className="size-px whitespace-nowrap">
-                    <div className="ps-6 py-3">
-                      <label htmlFor="hs-at-with-checkboxes-1" className="flex">
-                        <input
-                          type="checkbox"
-                          className="shrink-0 border-gray-300 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none "
-                          id="hs-at-with-checkboxes-1"
-                        />
-                        <span className="sr-only">Checkbox</span>
-                      </label>
-                    </div>
-                  </td>
-                  <td className="size-px whitespace-nowrap">
                     <div className="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3">
                       <div className="flex items-center gap-x-3">
                         <img
@@ -229,7 +191,7 @@ function Dashboard() {
                         >
                           <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
                         </svg>
-                        Active
+                        Done
                       </span>
                     </div>
                   </td>

@@ -1,9 +1,8 @@
 function Sidebar() {
   return (
     <div
-      id="hs-application-sidebar"
-      className="hs-overlay  [--auto-close:lg]
-    hs-overlay-open:translate-x-0
+      id="application-sidebar"
+      className="
     -translate-x-full transition-all duration-300 transform
     w-[260px] h-full
     hidden
@@ -12,7 +11,6 @@ function Sidebar() {
     lg:block lg:translate-x-0 lg:end-auto lg:bottom-0"
       role="dialog"
       tabIndex="-1"
-      aria-label="Sidebar"
     >
       <div className="relative flex flex-col h-full max-h-full">
         <div className="px-6 pt-4">
@@ -20,7 +18,6 @@ function Sidebar() {
           <a
             className="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-none focus:opacity-80"
             href="#"
-            aria-label="Project Management"
           >
             <span className="text-blue-600 font-bold">Project Management</span>
           </a>
@@ -29,10 +26,7 @@ function Sidebar() {
 
         {/* Content */}
         <div className="h-full overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 ">
-          <nav
-            className="hs-accordion-group p-3 w-full flex flex-col flex-wrap"
-            data-hs-accordion-always-open
-          >
+          <nav className="p-3 w-full flex flex-col flex-wrap">
             <ul className="flex flex-col space-y-1">
               <li>
                 <a
@@ -58,13 +52,8 @@ function Sidebar() {
                 </a>
               </li>
 
-              <li className="hs-accordion" id="users-accordion">
-                <button
-                  type="button"
-                  className="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-800 rounded-lg hover:bg-gray-100 focus:outline-none focus:bg-gray-100 "
-                  aria-expanded="true"
-                  aria-controls="users-accordion-child"
-                >
+              <li id="users-accordion">
+                <button className="w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-800 rounded-lg hover:bg-gray-100 focus:outline-none focus:bg-gray-100 ">
                   <svg
                     className="shrink-0 size-4"
                     xmlns="http://www.w3.org/2000/svg"
@@ -86,13 +75,8 @@ function Sidebar() {
                 </button>
               </li>
 
-              <li className="hs-accordion" id="projects-accordion">
-                <button
-                  type="button"
-                  className="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-800 rounded-lg hover:bg-gray-100 focus:outline-none focus:bg-gray-100 "
-                  aria-expanded="true"
-                  aria-controls="projects-accordion-child"
-                >
+              <li id="projects-accordion">
+                <button className="w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-800 rounded-lg hover:bg-gray-100 focus:outline-none focus:bg-gray-100 ">
                   <svg
                     className="shrink-0 size-4"
                     xmlns="http://www.w3.org/2000/svg"
@@ -112,13 +96,8 @@ function Sidebar() {
                 </button>
               </li>
 
-              <li className="hs-accordion" id="account-accordion">
-                <button
-                  type="button"
-                  className="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-800 rounded-lg hover:bg-gray-100 focus:outline-none focus:bg-gray-100 "
-                  aria-expanded="true"
-                  aria-controls="account-accordion-child"
-                >
+              <li id="account-accordion">
+                <button className=" w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-800 rounded-lg hover:bg-gray-100 focus:outline-none focus:bg-gray-100 ">
                   <svg
                     className="shrink-0 mt-0.5 size-4"
                     xmlns="http://www.w3.org/2000/svg"
