@@ -1,8 +1,8 @@
 function Breadcrumb() {
   return (
-    <div className="sticky top-0 inset-x-0 z-20 bg-white border-y px-4 sm:px-6 lg:px-8 lg:hidden">
+    <div className="sticky top-0 inset-x-0 z-20 bg-white border-y px-4 sm:px-6 lg:px-8 lg:hidden ">
       <div className="flex items-center py-2">
-        {/* <!-- Navigation Toggle --> */}
+        {/* Navigation Toggle */}
         <button
           type="button"
           className="size-8 flex justify-center items-center gap-x-2 border border-gray-200 text-gray-800 hover:text-gray-500 rounded-lg focus:outline-none focus:text-gray-500 disabled:opacity-50 disabled:pointer-events-none "
@@ -30,9 +30,9 @@ function Breadcrumb() {
             <path d="m8 9 3 3-3 3" />
           </svg>
         </button>
-        {/* <!-- End Navigation Toggle --> */}
+        {/* End Navigation Toggle */}
 
-        {/* <!-- Breadcrumb --> */}
+        {/* Breadcrumb */}
         <ol className="ms-3 flex items-center whitespace-nowrap">
           <li className="flex items-center text-sm text-gray-800 ">
             Application Layout
@@ -53,13 +53,13 @@ function Breadcrumb() {
             </svg>
           </li>
           <li
-            className="text-sm font-semibold text-gray-800 truncate "
+            className="text-sm font-semibold text-gray-800 truncate"
             aria-current="page"
           >
             Dashboard
           </li>
         </ol>
-        {/* <!-- End Breadcrumb --> */}
+        {/* End Breadcrumb */}
       </div>
     </div>
   );
