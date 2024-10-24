@@ -49,10 +49,7 @@ function Dashboard() {
             <table className="min-w-full divide-y divide-gray-200 ">
               <thead className="bg-gray-50 ">
                 <tr>
-                  <th
-                    scope="col"
-                    className="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3 text-start"
-                  >
+                  <th scope="col" className="ps-6 lg:ps-3 pe-6 py-3 text-start">
                     <div className="flex items-center gap-x-2">
                       <span className="text-xs font-semibold uppercase tracking-wide text-gray-800 ">
                         Name
@@ -91,7 +88,7 @@ function Dashboard() {
               <tbody className="divide-y divide-gray-200 ">
                 <tr>
                   <td className="size-px whitespace-nowrap">
-                    <div className="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3">
+                    <div className="ps-6 lg:ps-3 pe-6 py-3">
                       <div className="flex items-center gap-x-3">
                         <img
                           className="inline-block size-[38px] rounded-full"
@@ -155,7 +152,7 @@ function Dashboard() {
 
                 <tr>
                   <td className="size-px whitespace-nowrap">
-                    <div className="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3">
+                    <div className="ps-6 lg:ps-3 pe-6 py-3">
                       <div className="flex items-center gap-x-3">
                         <img
                           className="inline-block size-[38px] rounded-full"
