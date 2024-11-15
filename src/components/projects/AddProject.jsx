@@ -2,7 +2,7 @@ function AddProject() {
   return (
     <div
       id="add-project"
-      className="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto"
+      className="hs-overlay hidden size-full fixed start-0 z-[80] overflow-x-auto overflow-y-auto"
       role="dialog"
       tabIndex="-1"
       aria-labelledby="add-project-label"

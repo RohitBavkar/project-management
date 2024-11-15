@@ -106,10 +106,7 @@ function Dashboard() {
                         />
                         <div className="grow">
                           <span className="block text-sm font-semibold text-gray-800 ">
-                            Christina Bersh
-                          </span>
-                          <span className="block text-sm text-gray-500 ">
-                            christina@site.com
+                            Project Name 1
                           </span>
                         </div>
                       </div>
@@ -118,10 +115,10 @@ function Dashboard() {
                   <td className="h-px w-72 whitespace-nowrap">
                     <div className="px-6 py-3">
                       <span className="block text-sm font-semibold text-gray-800 ">
-                        Director
+                        Christina Bersh
                       </span>
                       <span className="block text-sm text-gray-500 ">
-                        Human resources
+                        christina@site.com
                       </span>
                     </div>
                   </td>
@@ -189,10 +186,7 @@ function Dashboard() {
                         />
                         <div className="grow">
                           <span className="block text-sm font-semibold text-gray-800 ">
-                            David Harrison
-                          </span>
-                          <span className="block text-sm text-gray-500 ">
-                            david@site.com
+                            Project Name 2{" "}
                           </span>
                         </div>
                       </div>
@@ -201,10 +195,10 @@ function Dashboard() {
                   <td className="h-px w-72 whitespace-nowrap">
                     <div className="px-6 py-3">
                       <span className="block text-sm font-semibold text-gray-800 ">
-                        Seller
+                        David Harrison
                       </span>
                       <span className="block text-sm text-gray-500 ">
-                        Branding products
+                        david@site.com
                       </span>
                     </div>
                   </td>
@@ -272,10 +266,7 @@ function Dashboard() {
                         </span>
                         <div className="grow">
                           <span className="block text-sm font-semibold text-gray-800 ">
-                            Anne Richard
-                          </span>
-                          <span className="block text-sm text-gray-500 ">
-                            anne@site.com
+                            Project Name 2
                           </span>
                         </div>
                       </div>
@@ -284,10 +275,10 @@ function Dashboard() {
                   <td className="h-px w-72 whitespace-nowrap">
                     <div className="px-6 py-3">
                       <span className="block text-sm font-semibold text-gray-800 ">
-                        Designer
+                        Anne Richard
                       </span>
                       <span className="block text-sm text-gray-500 ">
-                        IT department
+                        anne@site.com
                       </span>
                     </div>
                   </td>
