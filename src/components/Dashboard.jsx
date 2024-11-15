@@ -159,7 +159,7 @@ function Dashboard() {
                   <td className="size-px whitespace-nowrap">
                     <div className="px-6 py-3">
                       <span className="text-sm text-gray-500 ">
-                        28 Dec, 12:12
+                        28 Dec, 2024
                       </span>
                     </div>
                   </td>
@@ -239,7 +239,7 @@ function Dashboard() {
                   <td className="size-px whitespace-nowrap">
                     <div className="px-6 py-3">
                       <span className="text-sm text-gray-500 ">
-                        20 Dec, 09:27
+                        20 Dec, 2024
                       </span>
                     </div>
                   </td>
@@ -319,7 +319,7 @@ function Dashboard() {
                   <td className="size-px whitespace-nowrap">
                     <div className="px-6 py-3">
                       <span className="text-sm text-gray-500 ">
-                        18 Dec, 15:20
+                        18 Dec, 2024
                       </span>
                     </div>
                   </td>

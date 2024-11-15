@@ -76,14 +76,14 @@ function AddProject() {
               </div>
               <div className="space-y-2">
                 <label
-                  htmlFor="af-submit-app-project-name"
+                  htmlFor="projectName"
                   className="inline-block text-sm font-medium text-gray-800 mt-2.5 "
                 >
                   Project Name
                 </label>
 
                 <input
-                  id="af-submit-app-project-name"
+                  id="projectName"
                   type="text"
                   className="py-2 px-3 pe-11 block w-full border border-gray-200 shadow-sm rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                 />
@@ -97,7 +97,7 @@ function AddProject() {
                 </label>
 
                 <select
-                  id="af-submit-app-category"
+                  id="owner"
                   className="py-2 px-3 pe-9 block w-full border border-gray-200 shadow-sm rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                 >
                   <option>Select</option>
@@ -111,14 +111,14 @@ function AddProject() {
 
               <div className="space-y-2">
                 <label
-                  htmlFor="af-submit-app-description"
+                  htmlFor="description"
                   className="inline-block text-sm font-medium text-gray-800 mt-2.5 "
                 >
                   Description
                 </label>
 
                 <textarea
-                  id="af-submit-app-description"
+                  id="description"
                   className="py-2 px-3 block w-full border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                   rows="6"
                 ></textarea>
