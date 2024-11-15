@@ -31,7 +31,7 @@ function AddProject() {
                   <polyline points="17 8 12 3 7 8" />
                   <line x1="12" x2="12" y1="3" y2="15" />
                 </svg>
-                Upload Header
+                Upload Banner
               </button>
             </div>
           </div>
